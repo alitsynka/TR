@@ -7,29 +7,34 @@ import {motion} from 'framer-motion';
 export const ContactForm = () => {
     const rightAnimation = {
         hidden: {
-            x: 1300,
+            x: 100,
             opacity: 0,
         },
         visible: (custom: number) => ({
             x: 0,
             opacity: 1,
             transition: {
-                duration: 2,
-                delay: custom * 0.2
+                duration: 0.4,
+                delay: custom * 0.26,
+                ease: "easeInOut"
             },
         })
     }
     const leftAnimation = {
         hidden: {
-            x: -1300,
+            x: -100,
             opacity: 0,
         },
         visible: (custom: number) => ({
             x: 0,
             opacity: 1,
+            repeat: 'infinite',
             transition: {
-                duration: 1,
-                delay: custom * 0.8
+                duration: 0.4,
+                delay: custom * 0.26,
+                ease: "easeInOut",
+                type: 'just',
+
             },
         })
     }
@@ -38,28 +43,30 @@ export const ContactForm = () => {
             <Container fluid={'md'} className={style.Container} style={{padding: '0px'}}>
 
                 <Row>
-                    <motion.div variants={leftAnimation}
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{amount: 0.2}}
-                                custom={2}
-                    >
-                        <Col md={'7'}>
+                    <Col md={'7'}>
+                        <motion.div variants={leftAnimation}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{amount: 0.2}}
+                                    custom={2}
+                        >
                             <h2 className={style.TitleOfContentBlock}>Contact form</h2>
+                        </motion.div>
+                    </Col>
 
-                        </Col>
-                    </motion.div>
-                    <motion.div variants={rightAnimation}
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{amount: 0.2}}
-                                custom={2}
-                    >
-                        <Col lg={'5'} xs={'12'}>
-                            <h4 className={style.DescOfContentBlock}>Business challenges vary depending on the company’s
-                                situation.</h4>
-                        </Col>
-                    </motion.div>
+
+                    <Col lg={'5'} xs={'12'}>
+                        <motion.div variants={rightAnimation}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{amount: 0.2}}
+                                    custom={2}
+                        >
+                            <h4 className={style.DescOfContentBlock}>We specialize in a wide range of software
+                                development services, including</h4>
+                        </motion.div>
+                    </Col>
+
                 </Row>
 
 
@@ -72,6 +79,7 @@ export const ContactForm = () => {
                                         whileInView="visible"
                                         viewport={{amount: 0.2}}
                                         custom={2}
+                                // style={{width: '100%'}}
                             >
                                 <Form.Group className="mb-3" controlId="formBasicName">
                                     <Form.Control type="text" placeholder="name" className={style.FormInput}/>
@@ -103,24 +111,21 @@ export const ContactForm = () => {
                                 </Form.Group>
                             </motion.div>
                         </Col>
-
-
-                        <Col xs={12} sm={12} md={6}>
+                        <Col xs={12} sm={12} md={6} style={{height: '100%'}}>
                             <motion.div variants={rightAnimation}
                                         initial="hidden"
                                         whileInView="visible"
                                         viewport={{amount: 0.2}}
                                         custom={2}
+                                        style={{height: '100%'}}
                             >
-                                <Form.Group className="mb-3 h-100" controlId="formBasicPhoneNumber">
+                                <Form.Group className="h-100" controlId="formBasicPhoneNumber">
                                     <Form.Control as="textarea" placeholder="Tell us about your idea or project"
                                                   className={style.TextArea}/>
                                 </Form.Group>
                             </motion.div>
                         </Col>
-
                     </Row>
-
                     <motion.div variants={rightAnimation}
                                 initial="hidden"
                                 whileInView="visible"

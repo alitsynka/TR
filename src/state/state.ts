@@ -46,7 +46,7 @@ export const fallsOutFromAboveSolution = {
 export const fallsOutFromLeftSide = {
     hidden: {
         y: 0,
-        x: -1000,
+        x: -400,
         opacity: 0,
     },
     visible: (custom: number) => ({
@@ -54,8 +54,8 @@ export const fallsOutFromLeftSide = {
         x: 0,
         opacity: 1,
         transition: {
-            duration: 0.36,
-            delay: custom * 0.41,
+            duration: 0.4,
+            delay: custom * 0.26,
             ease: "easeInOut"
         },
     })

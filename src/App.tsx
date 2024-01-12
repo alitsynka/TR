@@ -24,14 +24,14 @@ function App() {
             <MenuComponent isOpenMenu={isOpenMenu} setIsOpenMenu={setIsOpenMenu}/>
             <Greeting isOpenMenu={isOpenMenu}/>
             <Services/>
-            {/*<DevelopmentCycle/>*/}
+            <DevelopmentCycle/>
             <Solution/>
             {/*<Industries/>*/}
             <Pricing/>
-            {/*<CostOfDevelopment/>*/}
+            <CostOfDevelopment/>
             <WhyUs/>
             <ContactForm/>
-            {/*<Footer/>*/}
+            <Footer/>
         </div>
     );
 }

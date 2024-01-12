@@ -47,6 +47,7 @@
 
         }
 
+
         .Inner {
           @include card;
           height: 100%;
@@ -65,6 +66,19 @@
           }
           @include break($widthXS) {
             min-height: 200px;
+          }
+          transition: all 0.3s ease;
+
+          &:hover {
+            transition: all 0.3s ease-in;
+
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0px 0px 10px 4px rgba(255, 13, 22, 0.20);
+
+            .Title {
+              font-family: 'HelveticaNeue-Medium';
+              color: #BD1D1D;
+            }
           }
 
         }

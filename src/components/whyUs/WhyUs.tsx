@@ -11,6 +11,7 @@ export const WhyUs = () => {
                         whileInView="visible"
                         viewport={{amount: 0.2}}
                         custom={2}
+
             >
                 <Container fluid={'md'} className={style.Container} style={{padding: '0px'}}>
                     <Row>
