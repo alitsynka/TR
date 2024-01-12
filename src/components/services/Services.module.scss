@@ -1,0 +1,92 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixines";
+
+.Wrapper {
+  @include wrapper($backgroundColorLight);
+  @include break($widthXS) {
+    padding: 100px 0;
+  }
+
+  .Container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: 1430px) {
+      padding: 0 20px !important;
+      max-width: 1600px;
+    }
+
+
+    @include break($widthXS) {
+      padding: 0 40px !important;
+    }
+    @include break(390px) {
+      padding: 0 20px !important;
+    }
+
+    .TitleBlock {
+      width: 100%;
+      max-width: 100%;
+
+      > * {
+        padding: 0 0;
+      }
+
+      .TitleOfContentBlock {
+        @include titleDescOfBlock;
+      }
+    }
+
+
+    .DescOfContentBlock {
+      @include descOfContentBlock;
+      text-align: left;
+      margin-top: 25px;
+    }
+
+    .Card {
+      padding: 20px 0 0px 0;
+      min-height: 100%;
+      margin: 0 !important;
+      max-width: 100%;
+
+      &:nth-child(2n) {
+        //border: 2px dashed #501621;
+        padding: 20px 0 0 20px;
+        @include break($widthXS) {
+          padding: 20px 0 0 0;
+        }
+      }
+
+
+      .Inner {
+        height: 100%;
+        min-height: 293px;
+        @include card;
+        padding: 50px 50px !important;
+        @include break($widthXS) {
+          min-height: 203px;
+          padding: 25px 25px !important;
+        }
+
+        &:hover {
+          transition: all 0.1s ease;
+          background: rgba(255, 255, 255, 0.8);
+          box-shadow: 0px 0px 10px 4px rgba(255, 13, 22, 0.20);
+
+          .Title {
+            font-family: 'HelveticaNeue-Medium';
+            color: #BD1D1D;
+            max-width: 200px;
+          }
+        }
+
+      }
+
+
+    }
+  }
+}

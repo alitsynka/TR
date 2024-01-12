@@ -1,0 +1,82 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixines";
+
+
+.Wrapper {
+  @include wrapper($backgroundColorLight);
+  @include break($widthXS) {
+    padding: 100px 0;
+  }
+
+  .Container {
+    @media (min-width: 1430px) {
+      padding: 0 20px !important;
+      max-width: 1600px;
+    }
+    @include break($widthXS) {
+      padding: 0 40px !important;
+    }
+    @include break(390px) {
+      padding: 0 20px !important;
+    }
+
+
+    .TitleOfContentBlock {
+      @include titleDescOfBlock;
+    }
+
+    .DescOfContentBlock {
+      @include descOfContentBlock;
+      text-align: left;
+      margin-top: 25px;
+    }
+
+    .CardWrapper {
+      margin-top: 80px;
+      @include break($widthXS) {
+        margin-top: 60px;
+        row-gap: 25px;
+      }
+
+      .Card {
+        padding: 15px 15px;
+        height: 100%;
+        min-height: 100%;
+        @include break($widthXS) {
+          padding: 0 0;
+
+        }
+
+        .Inner {
+          @include card;
+          height: 100%;
+          min-height: 600px;
+          @include break(1500px) {
+            min-height: 700px;
+          }
+          @include break(1400px) {
+            min-height: 900px;
+          }
+          @include break(1200px) {
+            min-height: 730px;
+          }
+          @include break(990px) {
+            min-height: 680px;
+          }
+          @include break($widthXS) {
+            min-height: 200px;
+          }
+
+        }
+
+        //  max-width: 380px;
+        //  @include break(1200px) {
+        //    max-width: 500px;
+        //  }
+        //  @include break($widthXS) {
+        //    max-width: 100%;
+        //  }
+      }
+    }
+  }
+}

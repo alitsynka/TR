@@ -1,0 +1,195 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixines";
+
+.MainWrapper {
+  position: fixed;
+  z-index: 99999999999999;
+  top: 0;
+  left: 0;
+  padding: 0 0;
+
+  .Wrapper {
+    //opacity: 20%;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    padding: 0 0;
+    transition: all 0.3s ease-in-out 0s;
+
+    .Container {
+      //display: flex;
+      //flex-direction: row;
+      //align-items: center;
+      //justify-content: space-between;
+      padding: 40px 0;
+      @media (min-width: 1430px) {
+        padding: 40px 20px !important;
+        max-width: 1600px;
+      }
+      @include break($widthXS) {
+        padding: 35px 40px !important;
+      }
+      @include break(390px) {
+        padding: 30px 20px !important;
+      }
+
+      .Brand {
+        text-transform: uppercase;
+        font-family: 'CraftworkGrotesk-Heavy';
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 44px;
+        letter-spacing: 0px;
+        text-align: left;
+        @include break($widthXS) {
+          font-family: 'CraftworkGrotesk-Heavy';
+          font-size: 25px;
+          font-weight: 900;
+          line-height: 28px;
+          letter-spacing: 0px;
+          text-align: left;
+
+        }
+      }
+
+      .BtnMenu {
+        width: 37.5px;
+        height: 25px;
+        @include break($widthXS) {
+          & > svg {
+            max-width: 37.5px;
+            max-height: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  .WrapperDarkMode {
+    background-color: rgba(84, 82, 82, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+}
+
+
+.Menu {
+  position: absolute;
+
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(217, 217, 217, 0.3);
+  backdrop-filter: blur(20px);
+
+  & > div:first-child {
+    overflow: hidden !important;
+    height: 100%;
+
+    &::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+    }
+  }
+
+  .WrapperMenu {
+    height: 100%;
+
+    .Container {
+      padding: 200px 40px 40px 40px;
+      height: 100%;
+
+      @media (min-width: 1430px) {
+        padding: 200px 20px 40px 20px !important;
+        max-width: 1600px;
+      }
+      @include break($widthXS) {
+        padding: 150px 40px 40px 40px;
+      }
+      @include break(390px) {
+        padding: 150px 20px 40px 20px;
+      }
+      overflow: hidden;
+      height: 100%;
+
+      & > div:first-child {
+        height: 100%;
+        max-height: 600px;
+        overflow-y: scroll !important;
+
+        &::-webkit-scrollbar {
+          height: 30px;
+          border-radius: 10px;
+          width: 8px;
+          padding: 10px 2px;
+          background-color: rgba(187, 184, 184, 0.2);
+          //box-shadow: inset 0 0 2px rgb(150, 150, 147);
+        }
+
+        &::-webkit-scrollbar-thumb {
+          border-radius: 10px;
+          background-color: rgba(73, 73, 71, 0.3);
+          padding: 10px 2px;
+          //border: 2px solid rgba(187, 184, 184, 0.2);
+          //-webkit-box-shadow: inset 0 0 6px rgb(44, 45, 40);
+        }
+
+        .Column, .Column1 {
+          display: flex;
+          flex-direction: column;
+
+          > li, a {
+            padding: 0 0;
+            @include cardDescriptionFont;
+            margin-bottom: 15px;
+            @include break($widthXS) {
+              margin-bottom: 15px;
+            }
+            @media screen and (min-width: 1800px) {
+              margin-bottom: 20px;
+            }
+          }
+
+          .Title {
+            color: $fontColorDesc;
+            @include break(450px) {
+              font-family: HelveticaNeue-Medium;
+            }
+
+
+          }
+        }
+
+        .Numbers {
+          display: flex;
+          flex-direction: row;
+          column-gap: 150px;
+          @include break($widthXS) {
+            flex-direction: column;
+          }
+
+        }
+      }
+
+    }
+  }
+
+}
+
+.BurgerBtn {
+  display: none !important;
+  width: 1px !important;
+  height: 1px !important;
+
+  > button {
+    width: 1px !important;
+    height: 1px !important;
+  }
+
+  > span {
+    > span {
+      display: none !important;
+      width: 1px !important;
+      height: 1px !important;
+    }
+  }
+}

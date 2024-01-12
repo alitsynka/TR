@@ -1,0 +1,102 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixines";
+
+.MainWrapper {
+  .Wrapper {
+    @include wrapper($backgroundColorLight);
+
+    @include break($widthXS) {
+      padding: 100px 0;
+    }
+
+    .Container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @media (min-width: 1430px) {
+        padding: 0 20px !important;
+        max-width: 1600px;
+      }
+      @include break($widthXS) {
+        padding: 0 40px !important;
+      }
+      @include break(390px) {
+        padding: 0 20px !important;
+      }
+
+      .TitleOfContentBlock {
+        @include titleDescOfBlock;
+      }
+
+      .DescOfContentBlock {
+        @include descOfContentBlock;
+        text-align: left;
+        margin-top: 25px;
+      }
+    }
+
+    .CardWrapper {
+      //display: flex;
+      //flex-wrap: wrap;
+      //justify-content: space-between;
+      //column-gap: 20px;
+      //row-gap: 60px;
+
+      .Card {
+        padding: 0 10px;
+        @include break(1200px) {
+          padding: 20px 10px !important;
+        }
+
+        .Inner {
+          max-width: 100%;
+          min-height: 815px;
+          @include card;
+          @include break(950px) {
+            min-height: 555px;
+          }
+          @include break($widthXS) {
+            min-height: 265px;
+          }
+
+          .ContactBtn {
+            width: 100%;
+            height: 10px;
+            opacity: 0;
+            background: #BD1D1D;
+            font-size: 5px;
+            @include cardDescriptionFont;
+            font-family: 'HelveticaNeue-Medium';
+            color: #F7F7F7;
+            padding: 14px 25px 11px 25px;
+            margin-top: 35px;
+            transition: all 0.5s ease-in;
+            max-width: 248px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+          }
+
+          &:hover {
+
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0px 0px 10px 4px rgba(255, 13, 22, 0.20);
+
+            .ContactBtn {
+
+              transition: all 0.2s ease-in;
+              width: 100%;
+              height: 100%;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

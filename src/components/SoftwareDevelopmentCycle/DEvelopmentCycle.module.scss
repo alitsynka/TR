@@ -1,0 +1,89 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixines";
+
+
+.Wrapper {
+  @include wrapper($backgroundColorDark);
+
+  .Container {
+    @media (min-width: 1400px) {
+      max-width: 1600px !important;
+    }
+  }
+
+  .WrapperSteps {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 5px;
+      height: 1px;
+      width: 100%;
+      max-width: 1538px;
+      background-color: rgba(158, 154, 155, 1);
+    }
+    .Steps {
+
+
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+
+
+      .Step {
+        @include descOfContentBlock;
+        color: $fontColorTitleH2;
+        text-wrap: none;
+        text-align: left;
+        white-space: nowrap;
+        padding-bottom: 30px;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+          color: $colorAttention;
+
+          &:after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: $colorAttention;
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            z-index: 999;
+          }
+        }
+      }
+
+      .ActiveStep {
+        color: $colorAttention;
+
+        &:after {
+          content: '';
+          width: 100%;
+          height: 2px;
+          background-color: $colorAttention;
+          position: absolute;
+          bottom: 5px;
+          left: 0;
+          z-index: 999;
+        }
+      }
+    }
+
+  }
+
+
+}
+
+.TitleOfContentBlock {
+  @include titleDescOfBlock;
+}
+
+.DescOfContentBlock {
+  @include descOfContentBlock
+}

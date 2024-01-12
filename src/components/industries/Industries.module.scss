@@ -1,0 +1,20 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixines";
+
+.Wrapper {
+  @include wrapper($backgroundColorDark);
+
+  .Container {
+    @media (min-width: 1400px) {
+      max-width: 1600px !important;
+    }
+
+    .TitleOfContentBlock {
+      @include titleDescOfBlock;
+    }
+
+    .DescOfContentBlock {
+      @include descOfContentBlock;
+    }
+  }
+}

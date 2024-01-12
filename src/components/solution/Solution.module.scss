@@ -1,0 +1,98 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixines";
+
+.MainWrapper {
+  @include wrapper($backgroundColorLight);
+  @include break($widthXS) {
+    padding: 100px 0;
+  }
+  overflow: hidden;
+
+  //border: 3px dashed #a044ce;
+  //box-shadow: inset 0 0 10px rgb(17, 17, 28);
+
+  .Wrapper {
+    background: $backgroundColorLight;
+    padding: 0 0;
+
+
+    @include break($widthXS) {
+      padding: 100px 0;
+    }
+
+    .Container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @media (min-width: 1430px) {
+        padding: 0 20px !important;
+        max-width: 1600px;
+      }
+      @include break($widthXS) {
+        padding: 0 40px !important;
+      }
+      @include break(390px) {
+        padding: 0 20px !important;
+      }
+
+      .SolutionCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        max-width: 500px;
+
+        + .SolutionCard {
+          @include break(650px) {
+            margin-top: 40px;
+          }
+        }
+
+        .CardTittleBlock {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: 25px;
+
+          .Rocket {
+            max-width: 48px;
+            max-height: 48px;
+          }
+
+          p {
+            margin-left: 25px;
+            @include descOfContentBlock;
+            color: $colorAttention;
+          }
+        }
+
+        .DescOfCard {
+          @include cardDescriptionFont;
+        }
+
+      }
+
+      .Steps {
+        margin-top: 80px;
+
+        @include break(650px) {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+}
+
+
+.TitleOfContentBlock {
+  @include titleDescOfBlock;
+}
+
+.DescOfContentBlock {
+  @include descOfContentBlock;
+  text-align: left;
+  margin-top: 25px;
+}

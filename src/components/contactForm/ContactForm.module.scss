@@ -1,0 +1,163 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixines";
+
+.Wrapper {
+  @include wrapper(rgba(251, 251, 251, 1));
+  @include break($widthXS) {
+    padding: 100px 0;
+  }
+
+  .Container {
+    @media (min-width: 1430px) {
+      padding: 0 20px !important;
+      max-width: 1600px;
+    }
+    @include break($widthXS) {
+      padding: 0 40px !important;
+    }
+    @include break(390px) {
+      padding: 0 20px !important;
+    }
+
+
+    .TitleOfContentBlock {
+      @include titleDescOfBlock;
+    }
+
+    .DescOfContentBlock {
+      @include descOfContentBlock;
+      text-align: right;
+      @include break(992px) {
+        text-align: left;
+        margin-top: 25px;
+      }
+    }
+
+    .FormWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 70px;
+
+      .MotionWr {
+        width: 100%;
+      }
+
+      .FormContainer {
+        width: 100%;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
+        @include break($widthXS) {
+          > div {
+            padding: 0 0;
+          }
+        }
+
+
+        .TextArea {
+          height: 100%;
+          @include break($widthXS) {
+            margin-top: 20px;
+          }
+        }
+
+        .FormInput, .TextArea {
+          border: 1px solid rgba(96, 96, 96, 1);
+          border-radius: 0;
+          padding: 16px 30px;
+          background: none;
+          outline: none;
+          @include cardDescriptionFont;
+          text-transform: none;
+          font-family: 'HelveticaNeue-Roman';
+          color: $fontColorTitleH2;
+
+          &::placeholder {
+            @include cardDescriptionFont;
+            font-family: 'HelveticaNeue-Roman';
+            color: $fontColorTitleH2;
+          }
+        }
+
+        .FormSelect {
+          text-transform: uppercase;
+          position: relative;
+          border: 1px solid rgba(96, 96, 96, 1);
+          border-radius: 0;
+          padding: 0 0;
+          background: none;
+          outline: rgba(251, 251, 251, 1);
+          @include cardDescriptionFont;
+          font-family: 'HelveticaNeue-Roman';
+          color: $fontColorTitleH2;
+
+          > option {
+            @include cardDescriptionFont;
+            font-family: 'HelveticaNeue-Roman';
+            color: $fontColorTitleH2;
+          }
+
+          .DropdownButton {
+
+            > button {
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              background: none;
+              border: none;
+              padding: 16px 30px;
+              @include cardDescriptionFont;
+              font-family: 'HelveticaNeue-Roman';
+              color: $fontColorTitleH2;
+
+              + div {
+                padding: 0 0;
+                width: 100%;
+                background: rgba(251, 251, 251, 1);
+                border: 1px solid rgba(96, 96, 96, 1);
+                transform: translate3d(0px, 67px, 0px) !important;
+                border-radius: 0 0;
+
+                > a {
+                  padding: 16px 30px;
+                  @include cardDescriptionFont;
+                  font-family: 'HelveticaNeue-Roman';
+                  color: $fontColorTitleH2;
+                  border-bottom: 1px solid rgba(96, 96, 96, 1);
+                }
+              }
+            }
+
+          }
+        }
+
+      }
+
+      .ContactBtn {
+        background-color: $colorAttention;
+        font-family: 'HelveticaNeue-Medium';
+        font-size: 30px;
+        color: $backgroundColorLight;
+        font-weight: 700;
+        line-height: 42px;
+        letter-spacing: 0px;
+        text-align: center;
+        padding: 12px 30px;
+        width: 100%;
+        max-width: 296px;
+        margin-top: 40px;
+        @media (max-width: 650px) {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}

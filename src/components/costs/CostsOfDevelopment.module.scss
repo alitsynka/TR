@@ -1,0 +1,64 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixines";
+
+
+.Wrapper {
+  @include wrapper($backgroundColorDark);
+  @include break($widthXS) {
+    padding: 100px 0;
+  }
+
+  .Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    @media (min-width: 1430px) {
+      padding: 0 20px !important;
+      max-width: 1600px;
+    }
+    @include break($widthXS) {
+      padding: 0 40px !important;
+    }
+    @include break(390px) {
+      padding: 0 20px !important;
+    }
+
+    .TitleOfContentBlock {
+      @include titleDescOfBlock;
+    }
+
+    .DescOfContentBlock {
+      @include descOfContentBlock;
+      @include break(1200px) {
+        text-align: left;
+        margin-top: 30px;
+      }
+    }
+
+    .SolutionCard {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+
+      @include break(650px) {
+        padding: 0;
+      }
+      @include break(430px) {
+        width: 100%;
+      }
+
+      .DescOfCard {
+        margin-left: 25px;
+        @include cardDescriptionFont;
+        @include break(650px) {
+          margin-left: 15px;
+        }
+      }
+    }
+
+
+  }
+}

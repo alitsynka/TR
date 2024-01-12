@@ -1,0 +1,53 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixines";
+
+.Wrapper {
+  @include wrapper($backgroundColorLight);
+  padding: 160px 0;
+  @include break($widthXS) {
+    padding: 100px 0;
+  }
+
+  .Container {
+    @media (min-width: 1430px) {
+      padding: 0 20px !important;
+      max-width: 1600px;
+    }
+    @include break($widthXS) {
+      padding: 0 40px !important;
+    }
+    @include break(390px) {
+      padding: 0 20px !important;
+    }
+
+
+    .TitleOfContentBlock {
+      @include titleDescOfBlock;
+    }
+
+    .DescOfContentBlock {
+      @include descOfContentBlock;
+      @include break(450px) {
+        font-family: 'HelveticaNeue-Roman';
+        text-align: left;
+        margin-top: 20px;
+      }
+    }
+
+    .Column {
+      > li {
+        @include cardDescriptionFont;
+        margin-bottom: 20px;
+      }
+
+      .Title {
+        color: $fontColorDesc;
+        @include break(450px) {
+          font-family: HelveticaNeue-Medium;
+          margin-top: 60px;
+        }
+
+      }
+    }
+  }
+}
