@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/TR/static/css/main.a2c7afb0.css",
+    "main.js": "/TR/static/js/main.7d855f5e.js",
+    "static/js/787.d4aba7ab.chunk.js": "/TR/static/js/787.d4aba7ab.chunk.js",
+    "static/media/bg.png": "/TR/static/media/bg.1d1bdab28cc6e580c864.png",
+    "static/media/img6.png": "/TR/static/media/img6.002ef5979f17f422f5cb.png",
+    "static/media/img4.png": "/TR/static/media/img4.60d533654013a0cd4028.png",
+    "static/media/img5.png": "/TR/static/media/img5.a103ac6d318c94140197.png",
+    "static/media/img2.png": "/TR/static/media/img2.3a03cc7f1b43538a70fe.png",
+    "static/media/img3.png": "/TR/static/media/img3.f17127ac7fa471fd564c.png",
+    "static/media/img1.png": "/TR/static/media/img1.ac405b39e1829cd9b53d.png",
+    "static/media/CraftworkGrotesk-Bold2.ttf": "/TR/static/media/CraftworkGrotesk-Bold2.e494898819920470eb26.ttf",
+    "static/media/CraftworkGrotesk-Medium.ttf": "/TR/static/media/CraftworkGrotesk-Medium.82e597c200bcad6faa99.ttf",
+    "static/media/CraftworkGrotesk-SemiBold.ttf": "/TR/static/media/CraftworkGrotesk-SemiBold.dee25a9370f404389a92.ttf",
+    "static/media/CraftworkGrotesk-Heavy.ttf": "/TR/static/media/CraftworkGrotesk-Heavy.ac0c486b1733d2889a0c.ttf",
+    "static/media/CraftworkGrotesk-Regular.ttf": "/TR/static/media/CraftworkGrotesk-Regular.196876e0b6bc20e7f425.ttf",
+    "static/media/HelveticaNeueCyr-Light.ttf": "/TR/static/media/HelveticaNeueCyr-Light.371670cc0c4aa701241a.ttf",
+    "static/media/HelveticaNeueCyr-Roman.ttf": "/TR/static/media/HelveticaNeueCyr-Roman.0ca719c710b1fbd7e02f.ttf",
+    "static/media/HelveticaNeueCyr-Medium.ttf": "/TR/static/media/HelveticaNeueCyr-Medium.bfdbae3c80f7aa49c618.ttf",
+    "static/media/costs3.svg": "/TR/static/media/costs3.89b163111fe35f3ba7d5b6552c96b226.svg",
+    "static/media/schedule.svg": "/TR/static/media/schedule.929f6dce166f0ffcaf01befc069dcd94.svg",
+    "static/media/costs5.svg": "/TR/static/media/costs5.f3319cdc266b8610af214f4dee7239fe.svg",
+    "static/media/enterprise.svg": "/TR/static/media/enterprise.79298b8c91a36230dc0c37045134e317.svg",
+    "static/media/costs4.svg": "/TR/static/media/costs4.ae41b35f20c22167630c4891d8daf3ec.svg",
+    "static/media/rocket.svg": "/TR/static/media/rocket.4535bbfa839dfe2536adf17c990b605b.svg",
+    "static/media/costs1.svg": "/TR/static/media/costs1.9b55d874f6c35f1744baffe27897c009.svg",
+    "index.html": "/TR/index.html",
+    "static/media/costs2.svg": "/TR/static/media/costs2.028ca136a13c3bec7cc2060ee4bdb380.svg",
+    "static/media/costs6.svg": "/TR/static/media/costs6.c3281fdc98d54d2cf4b5b7c5d820c85b.svg",
+    "main.a2c7afb0.css.map": "/TR/static/css/main.a2c7afb0.css.map",
+    "main.7d855f5e.js.map": "/TR/static/js/main.7d855f5e.js.map",
+    "787.d4aba7ab.chunk.js.map": "/TR/static/js/787.d4aba7ab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a2c7afb0.css",
+    "static/js/main.7d855f5e.js"
+  ]
+}
